@@ -2,7 +2,7 @@
 import React from "react";
 import Logo from "../path/to/Logo.png"; // update the path to your logo file
 
-function Home() {
+function Signup() {
   return (
     <div>
       {/* Main content */}
@@ -44,4 +44,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Signup;
