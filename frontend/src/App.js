@@ -1,25 +1,46 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { AuthProvider } from './context/AuthContext';
+import {BrowserRouter, Routes, Route, useLocation} from 'react-router-dom';
+import {AuthProvider} from './context/AuthContext';
 import Navbar from './components/Navbar';
 import ProtectedRoute from './components/ProtectedRoute';
+import Home from './pages/Home';
+import Signup from './pages/Signup';
+import CourseDetail from './pages/CourseDetail';
+import Professor from './pages/ProfessorDetail';
+import AllCourses from './pages/AllCourses';
+import AllProfessors from './pages/AllProfessors';
+
+
+function AppContent() {
+    const location = useLocation();
+    const hideNavbar = location.pathname === '/';
+
+    return (
+        <>
+            {!hideNavbar && <Navbar/>}
+            <Routes>
+                <Route path="/" element={<Signup/>}/>
+                <Route path="/home" element={
+
+                    <Home/>
+
+                }/>
+                <Route path="/courses/:id" element={<CourseDetail/>}/>
+                <Route path="/professors/:id" element={<Professor/>}/>
+                <Route path="/courses" element={<AllCourses/>}/>
+                <Route path="/professors" element={<AllProfessors/>}/>
+            </Routes>
+        </>
+    );
+}
 
 function App() {
-  return (
-    <AuthProvider>
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<h1>Home</h1>} />
-          <Route path="/login" element={<h1>Login</h1>} />
-          <Route path="/dashboard" element={
-            <ProtectedRoute>
-              <h1>Dashboard</h1>
-            </ProtectedRoute>
-          } />
-        </Routes>
-      </BrowserRouter>
-    </AuthProvider>
-  );
+    return (
+        <AuthProvider>
+            <BrowserRouter>
+                <AppContent/>
+            </BrowserRouter>
+        </AuthProvider>
+    );
 }
 
 export default App;

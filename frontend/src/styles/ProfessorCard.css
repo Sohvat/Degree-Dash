@@ -1,9 +1,9 @@
-.course-card {
+.prof-card {
   text-decoration: none;
   color: inherit;
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  flex-direction: column;  /* stack instead of side by side */
+  gap: 0.75rem;
   background: white;
   border: 1px solid #e2e8f0;
   border-radius: 12px;
@@ -11,37 +11,47 @@
   transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
 
-.course-card:hover {
+.prof-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
   border-color: #4F46E5;
 }
 
-.course-card__code {
-  font-size: 0.75rem;
-  font-weight: 700;
+.prof-card__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
   background: #eef2ff;
   color: #4F46E5;
-  padding: 0.25rem 0.6rem;
-  border-radius: 100px;
-  width: fit-content;
-  letter-spacing: 0.05em;
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
-.course-card__title {
+.prof-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.prof-card__name {
   font-size: 1rem;
   font-weight: 700;
   color: #1e293b;
   margin: 0;
 }
 
-.course-card__dept {
+.prof-card__dept {
   font-size: 0.8rem;
-  color: #94a3b8;
+  color: #4F46E5;
+  font-weight: 500;
   margin: 0;
 }
 
-.course-card__desc {
+.prof-card__bio {
   font-size: 0.85rem;
   color: #64748b;
   margin: 0;

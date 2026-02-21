@@ -1,35 +1,70 @@
-// Home.js
-import React from "react";
-import Logo from "../path/to/Logo.png"; // update with your actual path
-import ProfilePic from "../path/to/profile.png"; // update with your actual path
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { courses, professors } from "../data/dummyData";
+import CourseCard from "../components/CourseCard";
+import ProfessorCard from "../components/ProfessorCard";
+import '../styles/Home.css';
 
 function Home() {
+  const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();
+
+  const filteredCourses = courses.filter(course =>
+    course.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    course.code.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const filteredProfessors = professors.filter(prof =>
+    prof.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
-    <div>
-      {/* Upper border */}
-      <img src={Logo} alt="Degree Dash Logo" />
-      <h3>Degree Dash</h3>
-      <p>University of Manitoba</p>
-      <p>Department of Computer Science</p>
+    <div className="home-page">
+      <input
+        type="text"
+        placeholder="Search courses or professors..."
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        className="search-input"
+      />
 
-      <a href="/coursesPage">View all Courses</a>
-      <a href="/professors">View all Professors</a>
-
-      {/* Top right profile photo & menu */}
-      <div className="profile-container">
-        <img
-          src={ProfilePic}
-          alt="Your Profile"
-          className="profile-pic"
-          id="profileToggle"
-        />
-
-        <div className="dropdown-menu" id="profileDropdown">
-          <a href="/account">Account</a>
-          <a href="/settings">Settings</a>
-          <a href="/logout">Log out</a>
+      {/* Courses */}
+      <section>
+        <div className="section-header">
+          <h2>Courses</h2>
+          <button className="see-all-btn" onClick={() => navigate('/courses')}>
+            See all →
+          </button>
         </div>
-      </div>
+        {filteredCourses.length === 0 ? (
+          <p>No courses found</p>
+        ) : (
+          <div className="courses-container">
+            {filteredCourses.slice(0, 4).map(course => (
+              <CourseCard key={course._id} course={course} />
+            ))}
+          </div>
+        )}
+      </section>
+
+      {/* Professors */}
+      <section>
+        <div className="section-header">
+          <h2>Professors</h2>
+          <button className="see-all-btn" onClick={() => navigate('/professors')}>
+            See all →
+          </button>
+        </div>
+        {filteredProfessors.length === 0 ? (
+          <p>No professors found</p>
+        ) : (
+          <div className="professors-container">
+            {filteredProfessors.slice(0, 4).map(prof => (
+              <ProfessorCard key={prof._id} professor={prof} />
+            ))}
+          </div>
+        )}
+      </section>
     </div>
   );
 }

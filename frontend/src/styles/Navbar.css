@@ -1,27 +1,115 @@
-nav {
+.navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 1rem 2rem;
-  background-color: #1a1a2e;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
-nav a {
-  color: white;
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar__brand h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.navbar__brand p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.navbar__logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.navbar__links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar__links a {
+  color: #4F46E5;
   text-decoration: none;
-  margin-right: 1rem;
+  font-weight: 500;
 }
 
-nav button {
-  color: white;
-  background: transparent;
-  border: 1px solid white;
-  padding: 0.4rem 1rem;
+.navbar__links a:hover {
+  text-decoration: underline;
+}
+
+.profile-container {
+  position: relative;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   cursor: pointer;
-  border-radius: 4px;
+  object-fit: cover;
+  border: 2px solid #e2e8f0;
 }
 
-nav span {
-  color: white;
-  margin-right: 1rem;
+.profile-pic:hover {
+  border-color: #4F46E5;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 50;
+}
+
+.dropdown-menu p {
+  padding: 0.75rem 1rem;
+  margin: 0;
+  font-weight: 600;
+  border-bottom: 1px solid #e2e8f0;
+  color: #1e293b;
+}
+
+.dropdown-menu a,
+.dropdown-menu button {
+  padding: 0.75rem 1rem;
+  color: #374151;
+  text-decoration: none;
+  font-size: 0.9rem;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu button:hover {
+  background: #f8fafc;
+  color: #4F46E5;
+}
+
+.navbar__brand {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
 }

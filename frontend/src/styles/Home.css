@@ -1,0 +1,135 @@
+/* ── Page ───────────────────────────────────────────────────────── */
+.home-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* ── Search ─────────────────────────────────────────────────────── */
+.search-input {
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.search-input:focus {
+  border-color: #4F46E5;
+}
+
+/* ── Sections ───────────────────────────────────────────────────── */
+section {
+  margin-bottom: 3rem;
+}
+
+section h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+/* ── Courses grid ───────────────────────────────────────────────── */
+.courses-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+/* ── Professor grid ─────────────────────────────────────────────── */
+.professors-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.prof-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1.25rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.prof-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.prof-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.25rem;
+}
+
+.prof-card p {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* ── Empty / loading states ─────────────────────────────────────── */
+section p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.see-all-btn {
+  background: none;
+  border: none;
+  color: #4F46E5;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.see-all-btn:hover {
+  text-decoration: underline;
+}
+
+.page-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.dept-filter {
+  padding: 0.75rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #1e293b;
+  outline: none;
+  cursor: pointer;
+}
+
+.dept-filter:focus {
+  border-color: #4F46E5;
+}
+
+.results-count {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+}
