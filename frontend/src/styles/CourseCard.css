@@ -14,14 +14,14 @@
 .course-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  border-color: #4F46E5;
+  border-color: #d41818;
 }
 
 .course-card__code {
   font-size: 0.75rem;
   font-weight: 700;
-  background: #eef2ff;
-  color: #4F46E5;
+  background: #0c0c0c;
+  color: #faf5f5;
   padding: 0.25rem 0.6rem;
   border-radius: 100px;
   width: fit-content;

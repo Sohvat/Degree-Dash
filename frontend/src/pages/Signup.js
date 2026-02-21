@@ -13,14 +13,27 @@ function Signup() {
     <div className="home">
       {/* Main content */}
       <div className="home__content">
-        <img src={Logo} alt="Degree Dash Logo" className="home__logo" />
-        <h1>Degree Dash</h1>
-        <p>TAGLINE 1.</p>
-        <p>TAGLINE 2.</p>
-        <div className="home__buttons">
-          <button className="btn-secondary" onClick={() => setOverlay('login')}>Log in</button>
+         {/* Logo in the middle */}
+        <div className="home__logo-container">
+          <img src={Logo} alt="Degree Dash Logo" className="home__logo" />
+          <h1>Degree Dash</h1>
+        </div>    
+         {/* Taglines to the left */}
+        <div className="home__taglines">
+          <div className= "tag1">
+            <p>Dash Into Classes With Confidence</p>
+          </div> 
+          <div className= "tag2">
+            <p>Your Degree, Your Reviews, Your Connections</p>
+            </div>
+          <div className= "tag3">
+            <p>Reviews That Actually Matter</p>
+          </div>
         </div>
-        <small><a href="/about">About</a> · <a href="/contact">Contact</a></small>
+          <div className="home__buttons">
+            <button className="btn-secondary" onClick={() => setOverlay('login')}>Sign in</button>
+          </div>
+          <small><a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></small>
       </div>
 
       {/* Overlay */}
@@ -30,7 +43,7 @@ function Signup() {
             <button className="overlay__close" onClick={() => setOverlay(null)}>✕</button>
             <img src={Logo} alt="Degree Dash Logo" className="overlay__logo" />
             <h1>Welcome to Degree Dash</h1>
-            <p>Tagline</p>
+            <p>Become a Dasher today!</p>
             <button className="btn-microsoft" onClick={handleMicrosoftAuth}>
               {overlay === 'signup' ? 'Sign up' : 'Log in'} with Microsoft
             </button>

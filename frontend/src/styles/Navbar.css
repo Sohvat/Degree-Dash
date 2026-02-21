@@ -26,8 +26,8 @@
 }
 
 .navbar__logo {
-  width: 48px;
-  height: 48px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
 }
 
@@ -37,7 +37,7 @@
 }
 
 .navbar__links a {
-  color: #4F46E5;
+  color: #ca1d1d;
   text-decoration: none;
   font-weight: 500;
 }

@@ -14,15 +14,15 @@
 .prof-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  border-color: #4F46E5;
+  border-color: #d41818;
 }
 
 .prof-card__avatar {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: #eef2ff;
-  color: #4F46E5;
+  background: #0c0c0c;
+  color: #faf5f5;
   font-size: 1.2rem;
   font-weight: 700;
   display: flex;

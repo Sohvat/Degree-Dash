@@ -48,14 +48,14 @@
 }
 
 .filter-btn:hover {
-  border-color: #4F46E5;
-  color: #4F46E5;
+  border-color: #ec3a3a;
+  color: #1b1b1b;
 }
 
 .filter-btn.active {
-  background: #4F46E5;
-  border-color: #4F46E5;
-  color: white;
+  background: #ffffff;
+  border-color: #070707;
+  color: #070707;
 }
 
 /* ── Reviews ─────────────────────────────────────────────────── */
@@ -168,7 +168,7 @@
 }
 
 .prof-select:focus {
-  border-color: #4F46E5;
+  border-color: #bb0b0b;
 }
 
 /* ── Add professor ───────────────────────────────────────────── */
@@ -257,12 +257,12 @@
 }
 
 .popup-content textarea:focus {
-  border-color: #4F46E5;
+  border-color: #bb0b0b;
 }
 
 .popup-content button[type="submit"] {
   padding: 0.75rem;
-  background: #4F46E5;
+  background: #bb0b0b;
   color: white;
   border: none;
   border-radius: 8px;
@@ -273,7 +273,7 @@
 }
 
 .popup-content button[type="submit"]:hover:not(:disabled) {
-  background: #4338ca;
+  background: #fc1212;
 }
 
 .popup-content button[type="submit"]:disabled {
@@ -284,7 +284,7 @@
 /* ── Btn primary ─────────────────────────────────────────────── */
 .btn-primary {
   padding: 0.6rem 1.25rem;
-  background: #4F46E5;
+  background: #bb0b0b;
   color: white;
   border: none;
   border-radius: 8px;
@@ -295,7 +295,7 @@
 }
 
 .btn-primary:hover {
-  background: #4338ca;
+  background: #8d0909;
 }
 
 /* ── Responsive ──────────────────────────────────────────────── */

@@ -18,7 +18,7 @@
 }
 
 .search-input:focus {
-  border-color: #4F46E5;
+  border-color: #3d3d3d;
 }
 
 /* ── Sections ───────────────────────────────────────────────────── */
@@ -91,7 +91,7 @@ section p {
 .see-all-btn {
   background: none;
   border: none;
-  color: #4F46E5;
+  color: #df2929;
   font-weight: 600;
   font-size: 0.9rem;
   cursor: pointer;
@@ -115,17 +115,17 @@ section p {
 }
 
 .dept-filter {
-  padding: 0.75rem 1rem;
-  border: 2px solid #e2e8f0;
+  padding: 0rem 0.75rem;
+  border: 1.5px solid #ec3a3a;
   border-radius: 8px;
   font-size: 1rem;
-  color: #1e293b;
+  color: #0c0c0c;
   outline: none;
   cursor: pointer;
 }
 
 .dept-filter:focus {
-  border-color: #4F46E5;
+  border-color: #d41818;
 }
 
 .results-count {
