@@ -1,3 +1,18 @@
-# Name of Project: Degree Dash #
-# Purpose: Degree Dash helps U of M students choose courses by combining peer reviews with real alumni career outcomes. See course ratings AND where graduates work now. Microsoft login included. #
-# Tech Stack #
+# Name of Project #
+Degree Dash
+# Purpose #
+Degree Dash helps U of M students choose courses by combining peer reviews with real alumni career outcomes. See course ratings AND where graduates work now. Microsoft login included.
+# Tech Stack: # 
+Frontend - HTML, CSS, REACT, FIGMA 
+Backend - Node.js, Express.js, SQLite 
+# How to run Degree Dash locally #
+-In degree dash folder, type npm run dev to run the whole app(pwd should be degree-dash for this)
+-to test backend cd backend and say npm run dev
+-to test frontend cd frontend and npm start
+
+
+# Team members/ Contributors #
+Khadijat Folarin,
+Sohvat Saini,
+Faiza Salami,
+Kikiola Ojuko
