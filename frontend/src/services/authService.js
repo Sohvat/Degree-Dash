@@ -6,6 +6,6 @@ export const logout = async () => {
 };
 
 export const checkAuthStatus = async () => {
-  const response = await api.get('/auth');
+  const response = await api.get('/auth/service');
   return response.data;
 };

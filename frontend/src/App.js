@@ -24,8 +24,7 @@ function AppContent() {
             <Routes>
                 <Route path="/" element={<Signup/>}/>
                 <Route path="/home" element={
-
-                    <Home/>
+                    <ProtectedRoute><Home/></ProtectedRoute>
 
                 }/>
                 <Route path="/courses/:id" element={<CourseDetail/>}/>
