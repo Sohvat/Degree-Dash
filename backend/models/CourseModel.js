@@ -1,5 +1,5 @@
 // backend/models/Course.js
-const { runAsync, getAsync, allAsync } = require('../config/Database');
+const { runAsync, getAsync, allAsync } = require('../config/database');
 
 class Course {
     
@@ -559,3 +559,4 @@ class Course {
 }
 
 module.exports = Course;
+
